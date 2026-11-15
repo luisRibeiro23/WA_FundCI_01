@@ -1,19 +1,10 @@
-name: Lab 01 - Primeiro Workflow
-
-on:
-  push:
-    branches: [ main ]
-  workflow_dispatch:
-
+name: Hello Flow
+on: workflow_dispatch
 jobs:
-  hello-world:
+  first-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout do código
-        uses: actions/checkout@v4
-
-      - name: Executar mensagem de boas-vindas
-        run: |
-          echo "Iniciando o Lab 01 de GitHub Actions!"
-          date
-          uname -a
+      - name: Diga oi
+        run: echo "Hello World!"
+      - name: Diga valeu
+        run: echo "Valeu - bye!"
